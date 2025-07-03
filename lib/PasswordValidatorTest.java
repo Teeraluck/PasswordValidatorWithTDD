@@ -23,7 +23,7 @@ public class PasswordValidatorTest{
             System.out.println("Test Case 2 : "+pw+" : FAILED: Expected WEAK but got " + result2);
         }
 
-        // Test Case 3: รหัสผ่านเป็นตัวใหญ่ควรจะ MEDIUM
+        // Test Case 3: รหัสผ่านเป็นตัวใหญ่,ตัวเล็ก,ตัวเลขควรจะ MEDIUM
         pw = "asdK123GHJL";
         PasswordStrength result3 = PasswordValidator.validate(pw);
         if (result3 == PasswordStrength.MEDIUM) {
@@ -32,7 +32,7 @@ public class PasswordValidatorTest{
             System.out.println("Test Case 3 : "+pw+" : FAILED: Expected MEDIUM but got " + result3);
         }
 
-        // Test Case 4: รหัสผ่านเป็นตัวใหญ่และตัวเล็กควรจะ STRONG
+        // Test Case 4: รหัสผ่านเป็นตัวใหญ่,ตัวเล็ก,ตัวเลข,อักษรพิเศษควรจะ STRONG
         pw = "asdFGJH,*/123";
         PasswordStrength result4 = PasswordValidator.validate(pw);
         if (result4 == PasswordStrength.STRONG) {
